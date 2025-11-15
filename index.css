@@ -11,7 +11,7 @@ body {
   transform: translateX(-50%);
   width: 90%;
   max-width: 1200px;
-  background: transparent;
+  background: whitesmoke;
   backdrop-filter: blur(8px);
   border-radius: 15px;
   padding-top: 0.4rem;
@@ -95,7 +95,7 @@ body {
   top: 0;
   left: -280px;
   width: 280px;
-  height: 100%;
+  height: 70%;
   background: #fff;
   box-shadow: 2px 0 8px rgba(0,0,0,0.1);
   padding: 20px;
@@ -154,7 +154,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   background: rgba(255,255,255,0.98);
   display: none;
   justify-content: center;
@@ -216,8 +216,9 @@ body {
 /* Hero banner */
 .hero-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .hero-spacer {
@@ -297,16 +298,7 @@ body {
 }
 
 
-/* ================= Responsive ================= */
-
-/* ===== HERO BANNER RESPONSIVE ===== */
-.hero-img {
-  width: 100%;
-  height: 100vh; /* Full screen for large desktop */
-  object-fit: cover;
-  object-position: center;
-}
-
+/* Responsive  */
 /* Large screens (desktops) */
 @media (max-width: 1200px) {
   .navbar {
@@ -318,7 +310,7 @@ body {
   }
 
   .hero-img {
-    height: 85vh; /* Slightly shorter height */
+    height: 85vh; 
   }
 }
 
@@ -374,6 +366,7 @@ body {
 
   .cart-sidebar {
     width: 300px;
+    height: 70%;
   }
 
   .about-section .row {
@@ -387,9 +380,12 @@ body {
 
   .hero-img {
     height: 55vh;
-    object-fit: cover;
     object-position: top center;
   }
+
+  .sidebar-footer {
+  gap: 10px;
+}
 }
 
 /* Small phones */
@@ -398,6 +394,10 @@ body {
     width: 100%;
     border-radius: 0;
     padding: 0.4rem 0.8rem;
+  }
+
+    .navbar.show-navbar {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   }
 
   .navbar-brand img {
@@ -410,7 +410,6 @@ body {
 
   .hero-img {
     height: 45vh;
-    object-fit: cover;
     object-position: center;
   }
 
@@ -441,7 +440,6 @@ body {
     width: 100%;
   }
 }
-
 
 
 
@@ -960,13 +958,17 @@ body {
   width: 100%;
   max-height: 700px;
   overflow: hidden;
+  margin-bottom: 70px;
 }
 
+/* Main image */
 .main-image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 550px;     
+  object-fit: cover;  
+  object-position: top; 
 }
+
 
 /* Play Button */
 .play-button {
@@ -1025,11 +1027,15 @@ body {
 /* Close Button */
 .close-btn {
   position: absolute;
+  top: 10px;
+  right: 10px;
   color: rgb(224, 23, 9);
   font-size: 40px;
   cursor: pointer;
   font-weight: bold;
+  z-index: 99999;
 }
+
 
 
 
@@ -1113,7 +1119,7 @@ body {
 
 
 .payment-img {
-  max-width: 180%;
+  max-width: 120%;
   height: auto;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
   transition: transform 0.3s ease;

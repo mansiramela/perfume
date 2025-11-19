@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uvaan Perfume - Blog</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="blog.css" />
+
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand" href="#">
+      <img src="img/logo-1.png" alt="Uvaan Logo" width="90">
+    </a>
+
+    <div class="d-flex align-items-center ms-auto gap-4">
+      <ul class="nav d-none d-lg-flex align-items-center gap-4 mb-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <i id="searchIcon" class="bi bi-search fs-5"></i>
+        <div class="cart-icon position-relative">
+          <i id="cartIcon" class="bi bi-bag fs-5"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <i id="openSidebar" class="bi bi-list fs-2 d-lg-none"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-spacer"></div>
+
+<!-- Sidebar -->
+<aside id="customSidebar" class="sidebar">
+  <button class="close-btn">&times;</button>
+  <div class="sidebar-logo text-center mt-3">
+    <img src="img/logo-1.png" alt="Sidebar Logo" width="100">
+  </div>
+
+  <nav class="sidebar-nav mt-4">
+    <a href="#"><i class="bi bi-house"></i> Home</a>
+    <a href="#"><i class="bi bi-bag"></i> Products</a>
+    <a href="#"><i class="bi bi-telephone"></i> Contact Us</a>
+    <a href="#"><i class="bi bi-journal-text"></i> Blog</a>
+  </nav>
+
+  <div class="sidebar-footer mt-4 text-center">
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-youtube"></i></a>
+  </div>
+</aside>
+
+<div id="sidebarOverlay" class="overlay"></div>
+
+<!-- Search Popup (ONLY ONE) -->
+<div id="searchPopup" class="search-popup">
+  <span id="closeSearch" class="close-btn">&times;</span>
+  <div class="search-container">
+    <input type="text" placeholder="Search ..." />
+  </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">           
+  <div class="cart-header">
+      <h5>Your Cart (0)</h5>
+      <span class="close-btn" id="closeCart">&times;</span>
+  </div>
+  <div class="cart-body">
+      <p>Your cart is empty </p>
+      <button class="btn btn-outline-dark w-100">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <div class="overlay"></div>
+  <div class="blog-content">
+    <h1>Blog</h1>
+    <p>
+      <a href="index.html">Home</a> | Blog
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🔹 Search Popup
+const searchIcon = document.getElementById('searchIcon');
+const searchPopup = document.getElementById('searchPopup');
+const closeSearch = document.getElementById('closeSearch');  
+if (searchIcon && searchPopup && closeSearch) {
+  searchIcon.addEventListener('click', () => searchPopup.classList.add('active'));
+  closeSearch.addEventListener('click', () => searchPopup.classList.remove('active'));
+}
+
+// 🔹 Cart Sidebar
+const cartIcon = document.getElementById('cartIcon');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.getElementById('closeCart');
+if (cartIcon && cartSidebar && closeCart) {
+  cartIcon.addEventListener('click', () => cartSidebar.classList.add('active'));
+  closeCart.addEventListener('click', () => cartSidebar.classList.remove('active'));
+}
+
+// 🔹 Mobile Sidebar
+const openSidebar = document.getElementById('openSidebar');
+const sidebar = document.querySelector('.sidebar');
+const closeSidebar = document.querySelector('.close-btn');
+const overlay = document.querySelector('.overlay');
+if (openSidebar && sidebar && closeSidebar && overlay) {
+  openSidebar.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  });
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+}
+
+
+// 🔹 Navbar shows only on scroll
+const navbar = document.querySelector('.navbar');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add('show-navbar'); // show navbar
+  } else {
+    navbar.classList.remove('show-navbar'); // hide when at top
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

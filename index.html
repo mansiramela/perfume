@@ -23,10 +23,11 @@
 
     <div class="d-flex align-items-center ms-auto gap-4">
       <ul class="nav d-none d-lg-flex align-items-center gap-4 mb-0">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+       
       </ul>
 
       <div class="d-flex align-items-center gap-3">
@@ -51,10 +52,11 @@
   </div>
 
   <nav class="sidebar-nav mt-4">
-    <a href="#"><i class="bi bi-house"></i> Home</a>
-    <a href="#"><i class="bi bi-bag"></i> Products</a>
-    <a href="#"><i class="bi bi-telephone"></i> Contact Us</a>
-    <a href="#"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="index.html"><i class="bi bi-house"></i> Home</a>
+    <a href="shop.html"><i class="bi bi-bag"></i> Products</a>
+     <a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="contact.html"><i class="bi bi-telephone"></i> Contact Us</a>
+  
   </nav>
 
   <div class="sidebar-footer mt-4 text-center">
@@ -81,16 +83,69 @@
     </div>
     </div>
 
-    <div id="cartSidebar" class="cart-sidebar">           
-    <div class="cart-header">
-        <h5>Your Cart (0)</h5>
+<div id="cartSidebar" class="cart-sidebar">
+
+    <!-- Header -->
+    <div class="cart-top">
+        <h4>Your Cart</h4>
         <span class="close-btn" id="closeCart">&times;</span>
     </div>
-    <div class="cart-body">
-        <p>Your cart is empty </p>
-        <button class="btn btn-outline-dark w-100">Continue Shopping</button>
+
+    <!-- Product List -->
+    <div class="cart-items">
+
+        <div class="cart-item">
+            <img src="img/perfume17.jpeg" alt="">
+            <div class="cart-info">
+                <h5>UVA AXE Attar (12ml)</h5>
+                <p>$399.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume10.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Eden – 9 Attar (14ml)</h5>
+                <p>$380.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume19.jpeg" alt="">
+            <div class="cart-info">
+                <h5>I-KONIC-ZX (9ml)</h5>
+                <p>$599.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume12.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Magnetic (9ml)</h5>
+                <p>$270.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
     </div>
+
+    <!-- Subtotal Section -->
+    <div class="cart-summary">
+        <div class="row">
+            <h5>Subtotal</h5>
+            <h5>$1648</h5>
+        </div>
+
+        <button class="view-cart-btn">View Cart</button>
+        <button class="checkout-btn">Checkout Now</button>
     </div>
+
+</div>
+
+
 
     <!-- Hero-section -->
   <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
@@ -682,7 +737,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //  BUY NOW 
   buyNowInModal.addEventListener("click", () => {
-    window.location.href = "checkout.html";
+    window.location.href = "login.html";
   });
 
   //  ADD TO CART 
@@ -702,6 +757,24 @@ document.addEventListener("DOMContentLoaded", function () {
       showToast("❤️ Added to Wishlist!");
     });
   });
+
+
+
+// view cart/ checkout button
+  document.querySelector(".view-cart-btn").addEventListener("click", function () {
+    window.location.href = "addtocart.html";
+});
+
+document.querySelector(".checkout-btn").addEventListener("click", function () {
+    window.location.href = "checkout.html";
+});
+
+
+
+
+
+
+
 
   //  Reusable Toast Function
   function showToast(message) {

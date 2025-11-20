@@ -185,32 +185,134 @@ body {
   cursor: pointer;
 }
 
-/* Cart Sidebar */
+
+
+/* Cart Sidebar  */
 .cart-sidebar {
   position: fixed;
-  right: -400px;
   top: 0;
-  width: 400px;
-  height: 100%;
+  right: -320px;
+  width: 320px;
+  height: 90%;
   background: #fff;
-  box-shadow: -4px 0 8px rgba(0,0,0,0.1);
-  transition: right 0.4s ease;
-  z-index: 2100;
-  padding: 20px;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+  padding: 0;
+  transition: 0.4s ease;
+  border-radius: 20px 0 0 20px;
+  overflow-y: auto;
+  z-index: 5000;
 }
+
 .cart-sidebar.active {
   right: 0;
 }
-.cart-header {
+
+/* Header */
+.cart-top {
+  background: #d8e8ff;        
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px 0 0 0;
 }
-.cart-body {
-  text-align: center;
-  margin-top: 50px;
-  color: #444;
+
+.cart-top h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #004aad;             
 }
+
+.close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  color: #004aad;
+}
+
+/* Cart Items List */
+.cart-items {
+  padding: 15px 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #c9d9ff; 
+}
+
+.cart-item img {
+  width: 75px;
+  height: 75px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f2f6ff; 
+}
+
+
+.cart-info {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.cart-info h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #003a8c;             
+}
+
+.cart-info p {
+  color: #0074ff;            
+  margin: 5px 0 0;
+}
+
+.remove-btn {
+  font-size: 22px;
+  cursor: pointer;
+  color: #004aad;
+}
+
+/* Summary Section */
+.cart-summary {
+  padding: 20px;
+  border-top: 2px solid #d0e2ff;
+  background: #fff;
+}
+
+.cart-summary .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-summary h5 {
+  color: #003a8c;
+}
+
+.view-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: #cfe0ff;     
+  color: #003a8c;           
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: none;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0066ff;    
+  color: white;
+  border-radius: 12px;
+  font-size: 17px;
+  border: none;
+}
+
+
 
 
 /* Hero banner */

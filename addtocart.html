@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uvaan Perfume - Contact</title>
+  <title>Uvaan Perfume - Made to be Noticed</title>
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="addtocart.css" />
 </head>
 <body>
-
 
 <!-- navbar -->
   <nav class="navbar navbar-expand-lg shadow-sm">
@@ -155,97 +148,156 @@
 </div>
 
 
-<!-- CONTACT HERO -->
-<section class="contact-hero">
-  <div class="overlay"></div>
-  <div class="contact-content">
-    <h1>Contact</h1>
-    <p>
-      <a href="index.html">Home</a> | Contact
-    </p>
-  </div>
-</section>
 
 
+<!-- Cart Hero Section -->
+<section class="cart-hero">
+    <div class="cart-overlay"></div>
 
-<!-- CONTACT SECTION -->
-<section class="contact-section">
-
-  <div class="container">
-
-    <h2 class="heading">Contact Us</h2>
-    <p class="sub-text">
-      Uvan Perfume is dedicated to crafting long-lasting, luxury fragrances that elevate your personality.
-      If you have questions, suggestions, or need support, feel free to contact us anytime.
-    </p>
-
-    <div class="contact-wrapper">
-
-      <!-- LEFT INFO -->
-      <div class="left-info">
-
-        <div class="info-box">
-          <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
-          <div>
-            <h4>Address</h4>
-            <p>Officer City 1, Raj Nagar Ext, Ghaziabad 201017</p>
-          </div>
-        </div>
-
-        <div class="info-box">
-          <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
-          <div>
-            <h4>Phone</h4>
-            <p>+91 9582809034</p>
-          </div>
-        </div>
-
-        <div class="info-box">
-          <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
-          <div>
-            <h4>Email</h4>
-            <p>info@uvaan.in</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- RIGHT FORM -->
-      <div class="contact-form-box">
-        <h3>Send Message</h3>
-
-        <form>
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Type your Message..." required></textarea>
-          <button type="submit" class="send-btn">Send Message</button>
-        </form>
-      </div>
-
+    <div class="cart-content">
+        <h1>Cart</h1>
+        <p>
+            <a href="index.html">Home</a> &nbsp; | &nbsp; 
+            <span>cart</span>
+        </p>
     </div>
-  </div>
-
-</section>
-
-
-<!-- MAP SECTION -->
-<section class="map-section">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.319383269481!2d77.44564417535912!3d28.71980857909695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0bfdf2c50e9%3A0x7c8047c8a8a9df42!2sOfficer%20City%201%2C%20Raj%20Nagar%20Extension%2C%20Ghaziabad!5e0!3m2!1sen!2sin!4v1704987100000!5m2!1sen!2sin" 
-        width="100%" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
 </section>
 
 
 
+<!-- cart-table section -->
+<h1 class="cart-title">Cart</h1>
+
+<div class="cart-container">
+
+<table class="cart-table">
+<thead>
+<tr>
+    <th>PRODUCT</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>TOTAL</th>
+    <th>ACTION</th>
+</tr>
+</thead>
+
+<tbody>
+
+<!-- PRODUCT 1 -->
+<tr>
+<td class="product-info">
+    <img src="img/perfume1.jpeg" class="product-img">
+    <div>
+        <h3>UVA AXE Attar</h3>
+        <p>50ml · Premium</p>
+    </div>
+</td>
+
+<td>₹319.00</td>
+
+<td>
+    <div class="qty-box">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+    </div>
+</td>
+
+<td>₹319.00</td>
+
+<td><span class="remove">✕</span></td>
+</tr>
+
+<!-- PRODUCT 2 -->
+<tr>
+<td class="product-info">
+    <img src="img/perfume2.jpeg" class="product-img">
+    <div>
+        <h3>Eden – 9 Attar </h3>
+        <p>30ml · Jasmine</p>
+    </div>
+</td>
+
+<td>₹559.00</td>
+
+<td>
+    <div class="qty-box">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+    </div>
+</td>
+
+<td>₹559.00</td>
+
+<td><span class="remove">✕</span></td>
+</tr>
+
+<!-- PRODUCT 3 -->
+<tr>
+<td class="product-info">
+    <img src="img/perfume3.jpeg" class="product-img">
+    <div>
+        <h3>I-KONIC-ZX</h3>
+        <p>9ml · Fresh</p>
+    </div>
+</td>
+
+<td>₹279.00</td>
+
+<td>
+    <div class="qty-box">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+    </div>
+</td>
+
+<td>₹279.00</td>
+
+<td><span class="remove">✕</span></td>
+</tr>
+
+<!-- PRODUCT 4 -->
+<tr>
+<td class="product-info">
+    <img src="img/perfume4.jpeg" class="product-img">
+    <div>
+        <h3>Magnetic</h3>
+        <p>20ml · Soft Aroma</p>
+    </div>
+</td>
+
+<td>₹279.00</td>
+
+<td>
+    <div class="qty-box">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+    </div>
+</td>
+
+<td>₹279.00</td>
+
+<td><span class="remove">✕</span></td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ACTIONS -->
+<div class="bottom-actions">
+    <a class="clear">Clear Cart</a>
+    <button class="update">Update Cart</button>
+    <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+</div>
+
+</div>
 
 
-  <!-- Footer Section -->
+
+<!-- Footer Section -->
 <footer class="footer">
   <div class="container">
     <div class="row gy-4">
@@ -316,9 +368,6 @@
 
 
 
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
 <script>
 // 🔹 Search Popup
@@ -387,8 +436,12 @@ document.querySelector(".checkout-btn").addEventListener("click", function () {
 
 
 
-
 </script>
 
 </body>
 </html>
+
+
+
+
+

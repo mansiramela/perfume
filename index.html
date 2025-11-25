@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uvaan Perfume - Made to be Noticed</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<!-- navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand" href="#">
+      <img src="img/logo4.jpeg.png" alt="Uvaan Logo" width="90">
+    </a>
+
+    <div class="d-flex align-items-center ms-auto gap-4">
+      <ul class="nav d-none d-lg-flex align-items-center gap-4 mb-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+         <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+       
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <i id="searchIcon" class="bi bi-search fs-5"></i>
+        <div class="cart-icon position-relative">
+          <i id="cartIcon" class="bi bi-bag fs-5"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <i id="openSidebar" class="bi bi-list fs-2 d-lg-none"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-spacer"></div>
+
+
+<aside id="customSidebar" class="sidebar">
+  <button class="close-btn">&times;</button>
+  <div class="sidebar-logo text-center mt-3">
+    <img src="img/logo3.jpeg" alt="Sidebar Logo" width="100">
+  </div>
+
+  <nav class="sidebar-nav mt-4">
+    <a href="index.html"><i class="bi bi-house"></i> Home</a>
+    <a href="aboutus.html"><i class="bi bi-house"></i> About Us</a>
+    <a href="shop.html"><i class="bi bi-bag"></i> Shop</a>
+     <a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="contact.html"><i class="bi bi-telephone"></i> Contact Us</a>
+  
+  </nav>
+
+  <div class="sidebar-footer mt-4 text-center">
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-youtube"></i></a>
+  </div>
+</aside>
+
+<div id="sidebarOverlay" class="overlay"></div>
+
+<div id="searchPopup" class="search-popup">
+  <span id="closeSearch" class="close-btn">&times;</span>
+  <div class="search-container">
+    <input type="text" placeholder="Search ..." />
+  </div>
+</div>
+
+
+<div id="cartSidebar" class="cart-sidebar">
+
+    <!-- Header -->
+    <div class="cart-top">
+        <h4>Your Cart</h4>
+        <span class="close-btn" id="closeCart">&times;</span>
+    </div>
+
+    <!-- Product List -->
+    <div class="cart-items">
+
+        <div class="cart-item">
+            <img src="img/perfume17.jpeg" alt="">
+            <div class="cart-info">
+                <h5>UVA AXE Attar (12ml)</h5>
+                <p>$399.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume10.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Eden – 9 Attar (14ml)</h5>
+                <p>$380.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume19.jpeg" alt="">
+            <div class="cart-info">
+                <h5>I-KONIC-ZX (9ml)</h5>
+                <p>$599.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume12.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Magnetic (9ml)</h5>
+                <p>$270.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+    </div>
+
+    <!-- Subtotal Section -->
+    <div class="cart-summary">
+        <div class="row">
+            <h5>Subtotal</h5>
+            <h5>$1648</h5>
+        </div>
+
+        <button class="view-cart-btn">View Cart</button>
+        <button class="checkout-btn">Checkout Now</button>
+    </div>
+
+</div>
+
+
+
+    <!-- Hero-section -->
+  <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/homebanner1.jpeg" class="d-block w-100 hero-img" alt="Perfume Banner 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/homebanner2.jpeg" class="d-block w-100 hero-img" alt="Perfume Banner 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/homebanner3.jpeg" class="d-block w-100 hero-img" alt="Perfume Banner 3">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
+
+<!-- About Us -->
+  <section id="about" class="about-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 about-title">About Us</h2>
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 about-content">
+        <h3>We make sure over yours<br>with Boomrom</h3>
+        <p>
+          Our mission is simple: to create perfumes that don’t just smell beautiful but make you feel unforgettable. 
+          With a commitment to quality, authenticity, and creativity, Uvaan continues to redefine the perfume experience – 
+          turning everyday moments into extraordinary memories.
+        </p>
+        <a href="shop.html" class="btn btn-dark mt-3">Shop Now</a>
+      </div>
+
+      <div class="col-md-6 about-image">
+        <img src="img/Home-about.png" alt="About Uvaan" class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Latest Products -->
+<section class="latest-products py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Latest Products</h2>
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="UVA AXE Attar (12ml)"
+             data-type="Attar Oil"
+             data-desc="Inspired by AFNAN | Unisex |"
+             data-oldprice="₹399.00"
+             data-newprice="₹319.00"
+             data-img="img/perfume1.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume1.jpeg" alt="UVA AXE Attar (12ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>UVA AXE Attar (12ml)</h5>
+            <p>Attar Oil</p>
+            <div class="product-price">
+              ₹319.00 <del>₹399.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Eden – 9 Attar (14ml)"
+             data-type="Attar Oil"
+             data-desc="Inspired by AFNAN | Unisex |"
+             data-oldprice="₹699.00"
+             data-newprice="₹559.00"
+             data-img="img/perfume2.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume2.jpeg" alt="Eden – 9 Attar (14ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Eden – 9 Attar (14ml)</h5>
+            <p>Attar Oil</p>
+            <div class="product-price">
+              ₹559.00 <del>₹699.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="I-KONIC-ZX (9ml)"
+             data-type="Car Parfum"
+             data-desc="Long-lasting car fragrance"
+             data-oldprice="₹349.00"
+             data-newprice="₹279.00"
+             data-img="img/perfume3.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume3.jpeg" alt="I-KONIC-ZX (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>I-KONIC-ZX (9ml)</h5>
+            <p>Car Parfum</p>
+            <div class="product-price">
+              ₹279.00 <del>₹349.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Magnetic (9ml)"
+             data-type="Car Parfum"
+             data-desc="Premium car scent for freshness"
+             data-oldprice="₹349.00"
+             data-newprice="₹279.00"
+             data-img="img/perfume4.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume4.jpeg" alt="Magnetic (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Magnetic (9ml)</h5>
+            <p>Car Parfum</p>
+            <div class="product-price">
+              ₹279.00 <del>₹349.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Orange (9ml)"
+             data-type="Car Parfum"
+             data-desc="Citrusy car fragrance"
+             data-oldprice="₹349.00"
+             data-newprice="₹279.00"
+             data-img="img/perfume5.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume5.jpeg" alt="Orange (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Orange (9ml)</h5>
+            <p>Car Parfum</p>
+            <div class="product-price">
+              ₹279.00 <del>₹349.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Beech Flower (9ml)"
+             data-type="Car Parfum"
+             data-desc="Elegant floral car fragrance"
+             data-oldprice="₹349.00"
+             data-newprice="₹279.00"
+             data-img="img/perfume6.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume6.jpeg" alt="Beech Flower (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Beech Flower (9ml)</h5>
+            <p>Car Parfum</p>
+            <div class="product-price">
+              ₹279.00 <del>₹349.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Gen-Z-8 Attar (9ml)"
+             data-type="Attar Oil"
+             data-desc="Modern fragrance for all"
+             data-oldprice="₹499.00"
+             data-newprice="₹399.00"
+             data-img="img/perfume7.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume7.jpeg" alt="Gen-Z-8 Attar (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Gen-Z-8 Attar (9ml)</h5>
+            <p>Attar Oil</p>
+            <div class="product-price">
+              ₹399.00 <del>₹499.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-card"
+             data-name="Chocolate Attar (9ml)"
+             data-type="Attar Oil"
+             data-desc="Sweet and warm chocolate scent"
+             data-oldprice="₹399.00"
+             data-newprice="₹319.00"
+             data-img="img/perfume8.jpeg">
+
+          <span class="sale-badge">Sale!</span>
+          <img src="img/perfume8.jpeg" alt="Chocolate Attar (9ml)">
+          <div class="product-icons">
+            <i class="bi bi-cart buy-now"></i>
+            <i class="bi bi-eye quick-view"></i>
+            <i class="bi bi-heart wishlist"></i>
+          </div>
+          <div class="product-info">
+            <h5>Chocolate Attar (9ml)</h5>
+            <p>Attar Oil</p>
+            <div class="product-price">
+              ₹319.00 <del>₹399.00</del>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Popup Modal -->
+<div id="quickViewModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="modal-body">
+      <div class="modal-left">
+        <img id="modalImage" src="" alt="Product Image">
+      </div>
+      <div class="modal-right">
+        <h3 id="modalTitle"></h3>
+        <p id="modalType"></p>
+        <p id="modalDesc"></p>
+        <p class="modal-price">
+          <del id="modalOldPrice"></del>
+          <span id="modalNewPrice"></span>
+        </p>
+        <div class="quantity-box">
+        <label>Quantity</label>
+        <div class="qty-control">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <input type="number" value="1" min="1" id="modalQty">
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+      </div>
+        <button class="btn-buy-now">Buy Now</button>
+        <p class="meta">Categories: Attar, Beauty, Uncategorized</p>
+        <p class="meta">Tags: Attar Oil, Fragrance, Pooja Oil, White Oud</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials-section -->
+<section class="testimonials">
+  <h2 class="testimonial-title">Testimonials</h2>
+
+  <div class="testimonial-wrapper">
+    <button class="arrow left" id="prevBtn">&#10094;</button>
+
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial-card">
+        <img src="img/client1.jpg" alt="Client 1" class="client-img">
+        <h4>Siyj J.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“Absolutely love the Raw scent profile — long-lasting and elegant!”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="img/client2.jpg" alt="Client 2" class="client-img">
+        <h4>Aditya B.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“This perfume is of amazing quality! Indian brand but international feel.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="img/client3.jpg" alt="Client 3" class="client-img">
+        <h4>Neha P.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“Loved it! The projection and staying power are just perfect for daily wear.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="img/client4.jpg" alt="Client 4" class="client-img">
+        <h4>Rohit S.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“A classy fragrance with luxury vibes. Definitely worth every penny!”</p>
+      </div>
+
+      <!-- Duplicate card loop -->
+      <div class="testimonial-card">
+        <img src="img/client1.jpg" alt="Client 1" class="client-img">
+        <h4>Siyj J.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“Absolutely love the Raw scent profile — long-lasting and elegant!”</p>
+      </div>
+       <div class="testimonial-card">
+        <img src="img/client3.jpg" alt="Client 3" class="client-img">
+        <h4>Neha P.</h4>
+        <p class="verified">⭐ Verified Buyer</p>
+        <p class="message">“Loved it! The projection and staying power are just perfect for daily wear.”</p>
+      </div>
+    </div>
+
+    <button class="arrow right" id="nextBtn">&#10095;</button>
+  </div>
+</section>
+
+
+<!-- Banner Section -->
+<section class="banner-section">
+  <div class="banner">
+    <img src="img/banner1.png" alt="Women's Look" class="banner-img">
+    <div class="banner-content">
+      <p class="banner-sub">SKIN CARE</p>
+      <h2 class="banner-title">Women's Look</h2>
+      <a href="#" class="banner-btn">Shop Now →</a>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="img/banner2.jpg" alt="Makeup Offer" class="banner-img">
+    <div class="banner-content">
+      <p class="banner-sub">UP TO</p>
+      <h2 class="banner-title highlight">30%</h2>
+      <p class="banner-desc">Unique in Today</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video Section -->
+<!-- <div class="video-section">
+  <img src="img/Poster.jpg" alt="Main Image" class="main-image">
+
+  Play Button
+  <div class="play-button" id="playBtn">
+    <i class="triangle"></i>
+  </div>
+</div> -->
+
+<!-- Video Popup -->
+<!-- <div class="popup-wrapper" id="videoPopup">
+  <div class="popup-content">
+    <span class="close-btn" id="closeBtn">&times;</span>
+
+    REAL VIDEO TAG
+    <video id="videoPlayer" controls>
+      <source src="img/IMG_2903.MOV" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+</div> -->
+ <div class="video-section">
+  <video id="videos" autoplay muted loop playsinline>
+  <source src="img/perfume-related video.mp4" type="video/mp4">
+</video>
+
+  <!-- Play Button -->
+  <div class="play-button" id="playBtn">
+  <i class="bi bi-music-note-list" style="color: orangered; font-size: 2rem;"></i>
+  </div>
+</div>
+
+<style>
+  #videos {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;  
+  display: block;
+  margin-bottom: 2.5rem;
+}
+</style>
+<script>
+
+document.querySelector(".play-button").addEventListener("click", function () {
+    document.getElementById("videos").muted = false;
+    document.getElementById("videos").play();
+});
+</script>
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+    
+      <!-- Uvaan logo -->
+<div class="col-md-3 text-center">
+  <img src="img/logo3.jpeg" alt="Uvaan Logo" style="max-width:120px; margin-bottom:10px;">
+  <p class="mt-2 mb-2">Officer City 1, Raj Nagar Ext<br>Ghaziabad 201017</p>
+  
+  <h6 class="mt-3 mb-2">Supported Payment Method</h6>
+  <div class="payment-icons d-flex justify-content-center align-items-center flex-wrap gap-3">
+    <img src="img/Card.svg" alt="Payment Methods" class="payment-img">
+  </div>
+</div>
+
+
+      <!-- Information -->
+      <div class="col-md-3">
+       <h5>Information</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <ul class="footer-links">
+          <li><i class="bi bi-telephone"></i> +91 9582809034</li>
+          <li><i class="bi bi-envelope"></i> info@uvaan.in</li>
+          <li><i class="bi bi-globe"></i> www.uvaan.in</li>
+          <li><i class="bi bi-geo-alt"></i> India</li>
+        </ul>
+
+        <!-- Newsletter -->
+        <h6 class="mt-3">Subscribe to our newsletter to receive early discount offers.</h6>
+        <form class="d-flex mt-2">
+          <input type="email" class="form-control me-2" placeholder="Email">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-3">
+        <h5>Follow Us</h5>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="text-center mt-3">
+      <p>© 2025 All Rights Reserved | TSSG_TECH</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// 🔹 Search Popup
+const searchIcon = document.getElementById('searchIcon');
+const searchPopup = document.getElementById('searchPopup');
+const closeSearch = document.getElementById('closeSearch');  
+if (searchIcon && searchPopup && closeSearch) {
+  searchIcon.addEventListener('click', () => searchPopup.classList.add('active'));
+  closeSearch.addEventListener('click', () => searchPopup.classList.remove('active'));
+}
+
+// 🔹 Cart Sidebar
+const cartIcon = document.getElementById('cartIcon');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.getElementById('closeCart');
+if (cartIcon && cartSidebar && closeCart) {
+  cartIcon.addEventListener('click', () => cartSidebar.classList.add('active'));
+  closeCart.addEventListener('click', () => cartSidebar.classList.remove('active'));
+}
+
+// 🔹 Mobile Sidebar
+const openSidebar = document.getElementById('openSidebar');
+const sidebar = document.querySelector('.sidebar');
+const closeSidebar = document.querySelector('.close-btn');
+const overlay = document.querySelector('.overlay');
+if (openSidebar && sidebar && closeSidebar && overlay) {
+  openSidebar.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  });
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+}
+
+
+// 🔹 Navbar shows only on scroll
+const navbar = document.querySelector('.navbar');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add('show-navbar'); // show navbar
+  } else {
+    navbar.classList.remove('show-navbar'); // hide when at top
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+
+
+
+
+//  PRODUCT POPUP, CART & BUY LOGIC
+document.addEventListener("DOMContentLoaded", function () {
+  const quickViewButtons = document.querySelectorAll(".quick-view");
+  const modal = document.getElementById("quickViewModal");
+  const closeModal = document.querySelector(".close-modal");
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalType = document.getElementById("modalType");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalOldPrice = document.getElementById("modalOldPrice");
+  const modalNewPrice = document.getElementById("modalNewPrice");
+  const buyNowInModal = document.querySelector(".btn-buy-now");
+
+  // 🔹 OPEN QUICK VIEW POPUP
+  quickViewButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const productCard = this.closest(".product-card");
+      const { name, type, desc, oldprice, newprice, img } = productCard.dataset;
+
+      modalTitle.textContent = name;
+      modalType.textContent = type;
+      modalDesc.textContent = desc;
+      modalOldPrice.textContent = oldprice;
+      modalNewPrice.textContent = newprice;
+      modalImage.src = img;
+
+      modal.style.display = "flex";
+    });
+  });
+
+  //  CLOSE POPUP
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    modalImage.src = "";
+  });
+
+  window.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      modalImage.src = "";
+    }
+  });
+
+  //  BUY NOW 
+  buyNowInModal.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+
+  //  ADD TO CART 
+  const cartIcons = document.querySelectorAll(".bi-cart");
+  cartIcons.forEach(icon => {
+    icon.addEventListener("click", e => {
+      e.stopPropagation();
+      showToast("✅ Added to Cart!");
+    });
+  });
+
+  //  ADD TO WISHLIST 
+  const heartIcons = document.querySelectorAll(".bi-heart");
+  heartIcons.forEach(icon => {
+    icon.addEventListener("click", e => {
+      e.stopPropagation();
+      showToast("❤️ Added to Wishlist!");
+    });
+  });
+
+
+
+//  searchbag view cart/ checkout button
+  document.querySelector(".view-cart-btn").addEventListener("click", function () {
+    window.location.href = "addtocart.html";
+});
+
+document.querySelector(".checkout-btn").addEventListener("click", function () {
+    window.location.href = "checkout.html";
+});
+
+
+
+
+
+
+
+
+  //  Reusable Toast Function
+  function showToast(message) {
+    const msg = document.createElement("div");
+    msg.textContent = message;
+    msg.style.position = "fixed";
+    msg.style.bottom = "25px";
+    msg.style.right = "25px";
+    msg.style.background = "linear-gradient(135deg, #a046e4, #ff5a3c)";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 25px";
+    msg.style.borderRadius = "8px";
+    msg.style.fontWeight = "600";
+    msg.style.zIndex = "4000";
+    msg.style.boxShadow = "0 4px 12px rgba(0,0,0,0.3)";
+    msg.style.transition = "opacity 0.5s ease";
+    document.body.appendChild(msg);
+    setTimeout(() => {
+      msg.style.opacity = "0";
+      setTimeout(() => msg.remove(), 500);
+    }, 1200);
+  }
+});
+
+
+// Quantity increment & decrement
+const qtyInput = document.getElementById("modalQty");
+const qtyPlus = document.getElementById("qtyPlus");
+const qtyMinus = document.getElementById("qtyMinus");
+
+if (qtyPlus && qtyMinus && qtyInput) {
+  qtyPlus.addEventListener("click", () => {
+    qtyInput.value = parseInt(qtyInput.value) + 1;
+  });
+
+  qtyMinus.addEventListener("click", () => {
+    if (parseInt(qtyInput.value) > 1) {
+      qtyInput.value = parseInt(qtyInput.value) - 1;
+    }
+  });
+}
+
+
+
+// Testinomial slider logic
+const slider = document.getElementById("testimonialSlider");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  let index = 0;
+  const cardWidth = slider.children[0].offsetWidth + 20;
+
+  // Auto Slide Function
+  function slideNext() {
+    index++;
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(-${index * cardWidth}px)`;
+
+    // When reaching end (duplicate last), reset instantly
+    if (index === slider.children.length - 1) {
+      setTimeout(() => {
+        slider.style.transition = "none";
+        index = 0;
+        slider.style.transform = `translateX(0px)`;
+      }, 500);
+    }
+  }
+
+  // Manual controls
+  nextBtn.addEventListener("click", slideNext);
+
+  prevBtn.addEventListener("click", () => {
+    if (index <= 0) {
+      index = slider.children.length - 2;
+      slider.style.transition = "none";
+      slider.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+    setTimeout(() => {
+      slider.style.transition = "transform 0.5s ease-in-out";
+      index--;
+      slider.style.transform = `translateX(-${index * cardWidth}px)`;
+    }, 50);
+  });
+
+  // Auto-slide every 4s
+  setInterval(slideNext, 4000);
+
+
+const playBtn = document.getElementById("playBtn");
+const videoPopup = document.getElementById("videoPopup");
+const closeBtn = document.getElementById("closeBtn");
+const videoPlayer = document.getElementById("videoPlayer");
+
+// OPEN POPUP + AUTOPLAY
+playBtn.addEventListener("click", () => {
+  videoPopup.style.display = "flex";
+  videoPlayer.play();
+});
+
+// CLOSE BUTTON
+closeBtn.addEventListener("click", () => {
+  videoPopup.style.display = "none";
+  videoPlayer.pause();
+  videoPlayer.currentTime = 0;
+});
+
+// CLICK OUTSIDE VIDEO CLOSE
+window.addEventListener("click", (e) => {
+  if (e.target === videoPopup) {
+    videoPopup.style.display = "none";
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+  }
+});
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

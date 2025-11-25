@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uvaan Perfume - Made to be Noticed</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+<!-- navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand" href="#">
+      <img src="img/logo4.jpeg.png" alt="Uvaan Logo" width="90">
+    </a>
+
+    <div class="d-flex align-items-center ms-auto gap-4">
+      <ul class="nav d-none d-lg-flex align-items-center gap-4 mb-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+         <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+       
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <i id="searchIcon" class="bi bi-search fs-5"></i>
+        <div class="cart-icon position-relative">
+          <i id="cartIcon" class="bi bi-bag fs-5"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <i id="openSidebar" class="bi bi-list fs-2 d-lg-none"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-spacer"></div>
+
+
+<aside id="customSidebar" class="sidebar">
+  <button class="close-btn">&times;</button>
+  <div class="sidebar-logo text-center mt-3">
+    <img src="img/logo-1.png" alt="Sidebar Logo" width="100">
+  </div>
+
+  <nav class="sidebar-nav mt-4">
+    <a href="index.html"><i class="bi bi-house"></i> Home</a>
+    <a href="aboutus.html"><i class="bi bi-house"></i> About Us</a>
+    <a href="shop.html"><i class="bi bi-bag"></i> Shop</a>
+     <a href="blog.html"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="contact.html"><i class="bi bi-telephone"></i> Contact Us</a>
+  
+  </nav>
+
+  <div class="sidebar-footer mt-4 text-center">
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-youtube"></i></a>
+  </div>
+</aside>
+
+<div id="sidebarOverlay" class="overlay"></div>
+
+<div id="searchPopup" class="search-popup">
+  <span id="closeSearch" class="close-btn">&times;</span>
+  <div class="search-container">
+    <input type="text" placeholder="Search ..." />
+  </div>
+</div>
+
+
+<div id="cartSidebar" class="cart-sidebar">
+
+    <!-- Header -->
+    <div class="cart-top">
+        <h4>Your Cart</h4>
+        <span class="close-btn" id="closeCart">&times;</span>
+    </div>
+
+    <!-- Product List -->
+    <div class="cart-items">
+
+        <div class="cart-item">
+            <img src="img/perfume17.jpeg" alt="">
+            <div class="cart-info">
+                <h5>UVA AXE Attar (12ml)</h5>
+                <p>$399.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume10.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Eden – 9 Attar (14ml)</h5>
+                <p>$380.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume19.jpeg" alt="">
+            <div class="cart-info">
+                <h5>I-KONIC-ZX (9ml)</h5>
+                <p>$599.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+        <div class="cart-item">
+            <img src="img/perfume12.jpeg" alt="">
+            <div class="cart-info">
+                <h5>Magnetic (9ml)</h5>
+                <p>$270.00</p>
+            </div>
+            <span class="remove-btn">&times;</span>
+        </div>
+
+    </div>
+
+    <!-- Subtotal Section -->
+    <div class="cart-summary">
+        <div class="row">
+            <h5>Subtotal</h5>
+            <h5>$1648</h5>
+        </div>
+
+        <button class="view-cart-btn">View Cart</button>
+        <button class="checkout-btn">Checkout Now</button>
+    </div>
+
+</div>
+
+
+
+
+<!-- checkout Hero Section -->
+<section class="check-hero">
+    <div class="check-overlay"></div>
+
+    <div class="check-content">
+        <h1>Checkout</h1>
+        <p>
+            <a href="index.html">Home</a> &nbsp; | &nbsp; 
+            <span>checkout</span>
+        </p>
+    </div>
+</section>
+
+
+
+
+
+    <div class="checkout-container">
+
+        <h1 class="checkout-title">Checkout</h1>
+
+        <!-- TOP BUTTONS -->
+        <div class="top-btns">
+            <a href="login.html" class="top-btn">Log into Your Account</a>
+            <a href="#" class="top-btn">Enter Coupon Code</a>
+        </div>
+
+        <div class="checkout-wrapper">
+
+            <!-- BILLING DETAILS -->
+            <div class="billing-box">
+                <h2 class="section-title">Billing Details</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name*</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name*</label>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email*</label>
+                        <input type="email" placeholder="user@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone*</label>
+                        <input type="text" placeholder="+880388**0899">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Country*</label>
+                    <select>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>India</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Address*</label>
+                    <input type="text" placeholder="Enter your Address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Town / City*</label>
+                        <select>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>uttrakhand</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Postcode / ZIP*</label>
+                        <input type="text" placeholder="0000">
+                    </div>
+                </div>
+
+                <!-- SHIPPING ADDRESS -->
+                <div class="shipping-box">
+
+                    <h2 class="section-title">Shipping Address</h2>
+
+                    <!-- Create Account Checkbox -->
+                    <label class="checkbox-line">
+                        <input type="checkbox">
+                        Create an account?
+                    </label>
+
+                    <!-- Ship to Different Address Checkbox -->
+                    <label class="checkbox-line">
+                        <input type="checkbox">
+                        Ship to a different address?
+                    </label>
+
+                </div>
+
+            </div>
+
+         <!-- ORDER SUMMARY -->
+        <div class="summary-box">
+            <h2 class="section-title">Order Summary</h2>
+
+            <ul class="product-list">
+                <li>
+                    <span>Gen-Z-8 Attar(9ml)</span>
+                    <span> ₹399.00</span>
+                </li>
+                <li>
+                    <span>Beech Flower (9ml)</span>
+                    <span>   ₹279.00</span>
+                </li>
+                <li>
+                    <span>I-KONIC-ZX (9ml)</span>
+                    <span> ₹279.00</span>
+                </li>
+                 <li>
+                    <span>Eden – 9 Attar (14ml)</span>
+                    <span> ₹399.00</span>
+                </li>
+            </ul>
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span>₹1,356</span>
+            </div>
+
+            <div class="summary-line">
+                <span>Shipping</span>
+                <span>Free</span>
+            </div>
+
+            <h3 class="total-line">
+                <span>Total</span>
+                <span>₹1,356</span>
+            </h3>
+
+
+            <!-- PAYMENT METHODS  -->
+            <div class="payment-area">
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="pay">
+                        <div class="payment-info">
+                            <h4>Direct Bank Transfer</h4>
+                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="pay">
+                        <div class="payment-info">
+                            <h4>Cash on Delivery</h4>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="pay" checked>
+                        <div class="payment-info">
+                            <h4>Credit/Debit Cards or Paypal</h4>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+           
+            <button class="place-order">Place Order Now</button>
+
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
+ <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+    
+      <!-- Uvaan logo -->
+<div class="col-md-3 text-center">
+  <img src="img/logo3.jpeg" alt="Uvaan Logo" style="max-width:120px; margin-bottom:10px;">
+  <p class="mt-2 mb-2">Officer City 1, Raj Nagar Ext<br>Ghaziabad 201017</p>
+  
+  <h6 class="mt-3 mb-2">Supported Payment Method</h6>
+  <div class="payment-icons d-flex justify-content-center align-items-center flex-wrap gap-3">
+    <img src="img/Card.svg" alt="Payment Methods" class="payment-img">
+  </div>
+</div>
+
+
+      <!-- Information -->
+     <div class="col-md-3">
+       <h5>Information</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div
+
+      <!-- Contact Us -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <ul class="footer-links">
+          <li><i class="bi bi-telephone"></i> +91 9582809034</li>
+          <li><i class="bi bi-envelope"></i> info@uvaan.in</li>
+          <li><i class="bi bi-globe"></i> www.uvaan.in</li>
+          <li><i class="bi bi-geo-alt"></i> India</li>
+        </ul>
+
+        <!-- Newsletter -->
+        <h6 class="mt-3">Subscribe to our newsletter to receive early discount offers.</h6>
+        <form class="d-flex mt-2">
+          <input type="email" class="form-control me-2" placeholder="Email">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-3">
+        <h5>Follow Us</h5>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="text-center mt-3">
+      <p>© 2025 All Rights Reserved | TSSG_TECH</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+// 🔹 Search Popup
+const searchIcon = document.getElementById('searchIcon');
+const searchPopup = document.getElementById('searchPopup');
+const closeSearch = document.getElementById('closeSearch');  
+if (searchIcon && searchPopup && closeSearch) {
+  searchIcon.addEventListener('click', () => searchPopup.classList.add('active'));
+  closeSearch.addEventListener('click', () => searchPopup.classList.remove('active'));
+}
+
+// 🔹 Cart Sidebar
+const cartIcon = document.getElementById('cartIcon');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.getElementById('closeCart');
+if (cartIcon && cartSidebar && closeCart) {
+  cartIcon.addEventListener('click', () => cartSidebar.classList.add('active'));
+  closeCart.addEventListener('click', () => cartSidebar.classList.remove('active'));
+}
+
+// 🔹 Mobile Sidebar
+const openSidebar = document.getElementById('openSidebar');
+const sidebar = document.querySelector('.sidebar');
+const closeSidebar = document.querySelector('.close-btn');
+const overlay = document.querySelector('.overlay');
+if (openSidebar && sidebar && closeSidebar && overlay) {
+  openSidebar.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  });
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+}
+
+
+// 🔹 Navbar shows only on scroll
+const navbar = document.querySelector('.navbar');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add('show-navbar'); // show navbar
+  } else {
+    navbar.classList.remove('show-navbar'); // hide when at top
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+
+
+
+//  searchbag view cart/ checkout button
+  document.querySelector(".view-cart-btn").addEventListener("click", function () {
+    window.location.href = "addtocart.html";
+});
+
+document.querySelector(".checkout-btn").addEventListener("click", function () {
+    window.location.href = "checkout.html";
+});
+
+
+
+</script>
+</body>
+</html>

@@ -729,6 +729,15 @@
       flex:100%;
     }
 
+    .close-modal {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 30px;
+    color: #ff5a3c;
+    cursor: pointer;
+}
+
     .qty-control {
       justify-content: center;
     }

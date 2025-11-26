@@ -418,18 +418,7 @@ window.addEventListener('scroll', () => {
 
 
 
-//  searchbag view cart/ checkout button
-  document.querySelector(".view-cart-btn").addEventListener("click", function () {
-    window.location.href = "addtocart.html";
-});
-
-document.querySelector(".checkout-btn").addEventListener("click", function () {
-    window.location.href = "checkout.html";
-});
-
-
-
-// privacy-policy-animation
+// pricvacy policy 
 document.addEventListener("DOMContentLoaded", function () {
 
   const cards = document.querySelectorAll(".policy-card");
@@ -439,26 +428,24 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         let card = entry.target;
 
-        // show card (fade + up)
         card.classList.add("show");
 
-        // left or right slide based on odd/even column
-        let parent = card.closest(".col-md-6");
+        // Fix parent selector
+        let parent = card.closest(".col-md-6, .col-lg-4");
+
         let index = Array.from(parent.parentNode.children).indexOf(parent) + 1;
 
-        if (index % 2 === 1) {
-          card.classList.add("left");
-        } else {
-          card.classList.add("right");
-        }
+        if (index % 2 === 1) card.classList.add("left");
+        else card.classList.add("right");
 
-        observer.unobserve(card); // animate only once
+        observer.unobserve(card);
       }
     });
   }, { threshold: 0.3 });
 
   cards.forEach(card => observer.observe(card));
 });
+
 
 </script>
 </body>

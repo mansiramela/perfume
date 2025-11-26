@@ -94,7 +94,7 @@
             <img src="img/perfume17.jpeg" alt="">
             <div class="cart-info">
                 <h5>UVA AXE Attar (12ml)</h5>
-                <p>$399.00</p>
+                <p> ₹399.00</p>
             </div>
             <span class="remove-btn">&times;</span>
         </div>
@@ -103,7 +103,7 @@
             <img src="img/perfume10.jpeg" alt="">
             <div class="cart-info">
                 <h5>Eden – 9 Attar (14ml)</h5>
-                <p>$380.00</p>
+                <p> ₹380.00</p>
             </div>
             <span class="remove-btn">&times;</span>
         </div>
@@ -112,16 +112,16 @@
             <img src="img/perfume19.jpeg" alt="">
             <div class="cart-info">
                 <h5>I-KONIC-ZX (9ml)</h5>
-                <p>$599.00</p>
+                <p> ₹599.00</p>
             </div>
             <span class="remove-btn">&times;</span>
         </div>
-
+       
         <div class="cart-item">
             <img src="img/perfume12.jpeg" alt="">
             <div class="cart-info">
                 <h5>Magnetic (9ml)</h5>
-                <p>$270.00</p>
+                <p> ₹270.00</p>
             </div>
             <span class="remove-btn">&times;</span>
         </div>
@@ -132,11 +132,12 @@
     <div class="cart-summary">
         <div class="row">
             <h5>Subtotal</h5>
-            <h5>$1648</h5>
+            <h5> ₹1648</h5>
         </div>
 
-        <button class="view-cart-btn">View Cart</button>
-        <button class="checkout-btn">Checkout Now</button>
+    <a href="addtocart.html" class="view-card-btn">View Cart</a>
+    <a href="checkout.html" class="checkout-btn">Checkout Now</a>
+
     </div>
 
 </div>
@@ -166,10 +167,10 @@
         <h1 class="checkout-title">Checkout</h1>
 
         <!-- TOP BUTTONS -->
-        <div class="top-btns">
+        <!-- <div class="top-btns">
             <a href="login.html" class="top-btn">Log into Your Account</a>
             <a href="#" class="top-btn">Enter Coupon Code</a>
-        </div>
+        </div> -->
 
         <div class="checkout-wrapper">
 
@@ -236,17 +237,76 @@
 
                     <h2 class="section-title">Shipping Address</h2>
 
-                    <!-- Create Account Checkbox -->
-                    <label class="checkbox-line">
-                        <input type="checkbox">
-                        Create an account?
-                    </label>
+
+                    <a href="login.html">Create an account?</a>
+
+                 
 
                     <!-- Ship to Different Address Checkbox -->
-                    <label class="checkbox-line">
-                        <input type="checkbox">
-                        Ship to a different address?
-                    </label>
+                  <label class="checkbox-line">
+                      <input type="checkbox" id="shipToggle">
+                      Ship to a different address?
+                  </label>
+
+                  <!-- Shipping Address Form -->
+                  <div class="shipping-address" id="shippingForm" style="display: none;">
+
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label>First Name*</label>
+                              <input type="text" placeholder="First Name">
+                          </div>
+
+                          <div class="form-group">
+                              <label>Last Name*</label>
+                              <input type="text" placeholder="Last Name">
+                          </div>
+                      </div>
+
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label>Email*</label>
+                              <input type="email" placeholder="user@gmail.com">
+                          </div>
+
+                          <div class="form-group">
+                              <label>Phone*</label>
+                              <input type="text" placeholder="+880388**0899">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label>Country*</label>
+                          <select>
+                              <option>United Kingdom</option>
+                              <option>United States</option>
+                              <option>India</option>
+                          </select>
+                      </div>
+
+                      <div class="form-group">
+                          <label>Address*</label>
+                          <input type="text" placeholder="Enter your Address">
+                      </div>
+
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label>Town / City*</label>
+                              <select>
+                                  <option>Delhi</option>
+                                  <option>Mumbai</option>
+                                  <option>Uttrakhand</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <label>Postcode / ZIP*</label>
+                              <input type="text" placeholder="0000">
+                          </div>
+                      </div>
+
+                  </div>
+
 
                 </div>
 
@@ -462,13 +522,17 @@ window.addEventListener('scroll', () => {
 
 
 
-//  searchbag view cart/ checkout button
-  document.querySelector(".view-cart-btn").addEventListener("click", function () {
-    window.location.href = "addtocart.html";
-});
 
-document.querySelector(".checkout-btn").addEventListener("click", function () {
-    window.location.href = "checkout.html";
+
+
+document.getElementById("shipToggle").addEventListener("change", function() {
+    const form = document.getElementById("shippingForm");
+
+    if (this.checked) {
+        form.style.display = "block";   // Show form
+    } else {
+        form.style.display = "none";    // Hide form
+    }
 });
 
 

@@ -291,26 +291,34 @@ body {
   color: #003a8c;
 }
 
-.view-cart-btn {
+
+
+
+.view-card-btn {
   width: 100%;
+  display: block;
+  text-align: center;
   padding: 12px;
   background: #cfe0ff;     
   color: #003a8c;           
   border-radius: 12px;
   margin-bottom: 12px;
   font-size: 16px;
-  border: none;
+  text-decoration: none;
 }
 
 .checkout-btn {
   width: 100%;
+  display: block;
+  text-align: center;
   padding: 14px;
   background: #0066ff;    
   color: white;
   border-radius: 12px;
   font-size: 17px;
-  border: none;
+  text-decoration: none;
 }
+
 
 
 
